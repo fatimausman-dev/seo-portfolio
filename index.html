@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fatima Usman SEO Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single left-aligned column, project write-ups as ruled sections, SERP preview and schema as the two "specimen" moments */
+:root{
+  --bg:#F3F5F2; --surface:#FFFFFF; --ink:#16231D; --muted:#55645C; --line:#D3DBD5;
+  --accent:#1F4FD8; --accent-ink:#FFFFFF; --mark:#F4EC7A; --ok:#1B6B3A; --warn:#9A3412;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1613; --surface:#16201B; --ink:#E6EDE8; --muted:#94A49B; --line:#28362E;
+    --accent:#8FABFF; --accent-ink:#0F1613; --mark:#6B6616; --ok:#6FD39A; --warn:#F2A56B; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1613; --surface:#16201B; --ink:#E6EDE8; --muted:#94A49B; --line:#28362E;
+  --accent:#8FABFF; --accent-ink:#0F1613; --mark:#6B6616; --ok:#6FD39A; --warn:#F2A56B; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-block:48px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.4rem,7vw,4rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:clamp(1.5rem,4vw,2rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.15rem;font-weight:500}
+p{margin:0}
+a{color:var(--accent)}
+a:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.label{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:16px}
+.role{font-size:1.15rem;max-width:60ch}
+.contact{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:.85rem}
+.contact span,.contact a{min-width:0;overflow-wrap:anywhere}
+.note{border-left:3px solid var(--accent);padding:4px 0 4px 14px;color:var(--muted);max-width:62ch;font-size:.95rem}
+section{display:flex;flex-direction:column;gap:20px;border-top:1px solid var(--line);padding-top:28px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+.sec-head p{max-width:62ch;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-family:var(--mono);font-size:.75rem;border:1px solid var(--line);border-radius:4px;padding:2px 8px;background:var(--surface)}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:.9rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+tr:last-child td{border-bottom:0}
+td.kw{font-weight:500}
+.pill{font-family:var(--mono);font-size:.72rem;border:1px solid var(--line);border-radius:999px;padding:1px 8px;white-space:nowrap}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:16px}
+.two>*{min-width:0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.serp{display:flex;flex-direction:column;gap:2px}
+.serp .url{font-family:var(--mono);font-size:.78rem;color:var(--muted);overflow-wrap:anywhere}
+.serp .t{font-family:var(--body);font-size:1.15rem;color:var(--accent);overflow-wrap:anywhere;line-height:1.3}
+.serp .d{font-size:.9rem;overflow-wrap:anywhere}
+.bad .t{color:var(--muted)}
+label{font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:8px 10px}
+textarea{resize:vertical;min-height:84px}
+.count{font-family:var(--mono);font-size:.78rem;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.ok{color:var(--ok)} .warn{color:var(--warn)}
+pre{margin:0;overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;font-family:var(--mono);font-size:.8rem;line-height:1.55}
+.answer{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:8px}
+mark{background:var(--mark);color:inherit;padding:0 2px}
+ul.plain{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:6px}
+ul.check{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:12px}
+ul.check li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;min-width:0}
+ul.check strong{display:block;font-weight:600}
+ul.check span{color:var(--muted);font-size:.92rem}
+.job{display:flex;flex-direction:column;gap:8px}
+.job-top{display:flex;justify-content:space-between;gap:4px 16px;flex-wrap:wrap}
+.job-top .dates{font-family:var(--mono);font-size:.82rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="label">SEO portfolio · Islamabad, Pakistan</p>
+    <h1>Fatima Usman</h1>
+    <p class="role">Junior SEO specialist focused on on-page SEO, content optimization, and visibility in answer engines and AI search. Software Engineering graduate who can also make the changes in HTML, WordPress or Next.js.</p>
+    <div class="contact">
+      <span>fatimaausman8@gmail.com</span>
+      <a href="https://www.linkedin.com/in/fatima-usman022">linkedin.com/in/fatima-usman022</a>
+      <a href="https://github.com/fatimausman-dev">github.com/fatimausman-dev</a>
+    </div>
+    <p class="note">The projects below are practice work on a made-up brand, Margalla Roasters, a specialty coffee roaster. They show how I approach each task. They are not client results and carry no traffic numbers.</p>
+  </header>
+
+  <section id="keywords">
+    <div class="sec-head">
+      <p class="label">Project 1 · Keyword research</p>
+      <h2>Keyword and search intent map</h2>
+      <p>I group keywords by what the searcher wants, then give each group one page. That keeps pages from competing with each other.</p>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Keyword</th><th>Search intent</th><th>Target page</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">specialty coffee beans islamabad</td><td><span class="pill">Commercial</span></td><td>Shop collection page</td><td>High</td></tr>
+          <tr><td class="kw">buy coffee beans online pakistan</td><td><span class="pill">Transactional</span></td><td>Home page</td><td>High</td></tr>
+          <tr><td class="kw">coffee subscription pakistan</td><td><span class="pill">Transactional</span></td><td>Subscription landing page</td><td>High</td></tr>
+          <tr><td class="kw">best coffee beans for pour over</td><td><span class="pill">Informational</span></td><td>Blog guide</td><td>Medium</td></tr>
+          <tr><td class="kw">how to brew v60</td><td><span class="pill">Informational</span></td><td>Blog guide with FAQ</td><td>Medium</td></tr>
+          <tr><td class="kw">arabica vs robusta</td><td><span class="pill">Informational</span></td><td>Blog explainer</td><td>Low</td></tr>
+          <tr><td class="kw">coffee roasters near me</td><td><span class="pill">Local</span></td><td>Location page</td><td>Medium</td></tr>
+          <tr><td class="kw">margalla roasters</td><td><span class="pill">Navigational</span></td><td>Home page</td><td>Maintain</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="label">Next step in a real project: check volume and difficulty in Search Console data, Semrush or Ahrefs before locking priorities.</p>
+  </section>
+
+  <section id="onpage">
+    <div class="sec-head">
+      <p class="label">Project 2 · On-page SEO</p>
+      <h2>Title tag and meta description rewrite</h2>
+      <p>Edit the text below to see the search result preview and the length counters update. Titles around 60 characters and descriptions around 155 usually display without being cut off.</p>
+    </div>
+    <div class="two">
+      <div class="panel bad">
+        <p class="label">Before</p>
+        <div class="serp">
+          <span class="url">margallaroasters.example</span>
+          <span class="t" id="b-title">Home | Margalla Roasters</span>
+          <span class="d" id="b-desc">Welcome to our coffee shop. We sell coffee.</span>
+        </div>
+        <ul class="plain">
+          <li>Title has no keyword and no location.</li>
+          <li>Description says nothing a searcher can act on.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <p class="label">After (editable)</p>
+        <div class="serp">
+          <span class="url">margallaroasters.example</span>
+          <span class="t" id="p-title"></span>
+          <span class="d" id="p-desc"></span>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <label for="in-title">Title tag</label>
+      <input id="in-title" type="text" value="Specialty Coffee Beans in Islamabad | Margalla Roasters">
+      <div class="count"><span id="c-title"></span><span id="s-title"></span></div>
+      <label for="in-desc">Meta description</label>
+      <textarea id="in-desc">Freshly roasted single-origin beans, delivered across Pakistan. Choose your roast and grind for pour over, espresso or French press.</textarea>
+      <div class="count"><span id="c-desc"></span><span id="s-desc"></span></div>
+    </div>
+    <ul class="plain">
+      <li>The main keyword and the city sit at the front of the title, the brand at the end.</li>
+      <li>The description names what is sold, who it ships to, and what the visitor can choose.</li>
+      <li>I also check the H1, URL slug, image alt text and internal links for the same page.</li>
+    </ul>
+  </section>
+
+  <section id="aeo">
+    <div class="sec-head">
+      <p class="label">Project 3 · AEO</p>
+      <h2>Answer-first FAQ with schema</h2>
+      <p>Answer engines and featured snippets favor a direct answer near the top, followed by detail. Below is a sample block for the question "How do I brew coffee with a V60?"</p>
+    </div>
+    <div class="answer">
+      <h3>How do I brew coffee with a V60?</h3>
+      <p><mark>Use 15 g of medium-fine coffee and 250 g of water at about 94 °C. Wet the filter, bloom the grounds with 40 g of water for 30 seconds, then pour the rest in slow circles. Total brew time is about three minutes.</mark></p>
+      <p class="label">Highlighted: the 45-word direct answer. Below it, the page would add steps, gear, and troubleshooting.</p>
+    </div>
+    <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How do I brew coffee with a V60?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Use 15 g of medium-fine coffee and 250 g of water at about 94 °C. Wet the filter, bloom the grounds with 40 g of water for 30 seconds, then pour the rest in slow circles. Total brew time is about three minutes."
+    }
+  }]
+}
+&lt;/script&gt;</code></pre>
+    <p class="note">Google now shows FAQ rich results for only a small set of sites, so I treat this markup as a way to make the answer structure clear to machines, not as a promise of a rich result.</p>
+  </section>
+
+  <section id="audit">
+    <div class="sec-head">
+      <p class="label">Project 4 · Content audit</p>
+      <h2>Content audit sample</h2>
+      <p>I review existing pages for gaps, outdated information and pages that compete for the same keyword, then list one clear action per page.</p>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Page</th><th>Issue found</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">/coffee-beans</td><td>Keyword cannibalization with /shop</td><td>Merge into /shop, add a 301 redirect, move useful copy</td></tr>
+          <tr><td class="kw">/blog/brewing-guide</td><td>Thin content, about 200 words, no FAQ</td><td>Expand with steps and an answer-first FAQ section</td></tr>
+          <tr><td class="kw">/blog/best-grinders-2022</td><td>Outdated year and products</td><td>Refresh the list and update the title and date</td></tr>
+          <tr><td class="kw">/about</td><td>No named team, no roasting details</td><td>Add founder name, sourcing facts and roasting method for entity clarity</td></tr>
+          <tr><td class="kw">/shop/ethiopia-yirgacheffe</td><td>Images missing alt text, no internal links</td><td>Write descriptive alt text, link from related guides</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="geo">
+    <div class="sec-head">
+      <p class="label">Project 5 · GEO</p>
+      <h2>AI search visibility checklist</h2>
+      <p>Generative engines pull from pages that are clear, specific and consistent across the web. This is the checklist I would run for a brand.</p>
+    </div>
+    <ul class="check">
+      <li><strong>Entity clarity</strong><span>Same brand name, description and location on the site, social profiles and directories.</span></li>
+      <li><strong>Citable facts</strong><span>Original details such as roast dates, origins and brew ratios stated plainly in short paragraphs.</span></li>
+      <li><strong>Structured pages</strong><span>Clear headings, definitions, tables and FAQs that an AI can lift as an answer.</span></li>
+      <li><strong>Brand mention monitoring</strong><span>Test a fixed set of questions in AI tools each month and log whether the brand is mentioned or cited.</span></li>
+      <li><strong>Citation opportunities</strong><span>List sites that AI answers already cite for the topic and note which ones could feature the brand.</span></li>
+      <li><strong>Backlink research</strong><span>Compare competitor backlinks and pick relevant outreach targets such as coffee blogs and local lifestyle sites.</span></li>
+    </ul>
+  </section>
+
+  <section id="report">
+    <div class="sec-head">
+      <p class="label">Project 6 · Reporting</p>
+      <h2>Monthly SEO report outline</h2>
+      <p>The structure I use to report on rankings and organic performance in a way a manager or client can read in two minutes.</p>
+    </div>
+    <div class="tags">
+      <span class="tag">Clicks and impressions</span>
+      <span class="tag">Average position</span>
+      <span class="tag">Top queries</span>
+      <span class="tag">Top landing pages</span>
+      <span class="tag">Keyword ranking changes</span>
+      <span class="tag">New backlinks</span>
+      <span class="tag">AEO and GEO mentions</span>
+      <span class="tag">Work completed</span>
+      <span class="tag">Next month's plan</span>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="sec-head">
+      <p class="label">Experience</p>
+      <h2>Where I have done this work</h2>
+    </div>
+    <div class="job">
+      <div class="job-top"><h3>SEO Specialist, Roar Marketing Solutions (remote)</h3><span class="dates">May 2025 to Jun 2026</span></div>
+      <ul class="plain">
+        <li>Optimized title tags, meta descriptions, headings, internal links and image alt text for client websites.</li>
+        <li>Researched keywords and search intent, then wrote and optimized blog and landing page content.</li>
+        <li>Structured content with clear answers and FAQs for featured snippets, People Also Ask and AI-generated answers.</li>
+        <li>Tracked keyword rankings and organic performance and coordinated deadlines with clients.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-top"><h3>Software Development Intern, PixelSoft Solutions</h3><span class="dates">Jun 2023 to Sep 2023</span></div>
+      <p>Built responsive pages from 15+ Figma designs and fixed 10+ browser compatibility issues, which is why I am comfortable working with developers and designers on SEO changes.</p>
+    </div>
+  </section>
+
+  <footer>
+    B.Sc. Software Engineering, COMSATS University Islamabad (2020 to 2024). Harvard CS50 certificate. Web skills: HTML5, CSS3, WordPress, Next.js, Figma.
+  </footer>
+</div>
+
+<script>
+(function(){
+  function $(id){return document.getElementById(id)}
+  function sync(inId,outId,cId,sId,limit,name){
+    var v=$(inId).value;
+    $(outId).textContent=v||"(empty)";
+    $(cId).textContent=v.length+" / "+limit+" characters";
+    var s=$(sId);
+    if(v.length===0){s.textContent="Add a "+name;s.className="warn";}
+    else if(v.length>limit){s.textContent="Too long, may be cut off";s.className="warn";}
+    else{s.textContent="Fits";s.className="ok";}
+  }
+  function run(){
+    sync("in-title","p-title","c-title","s-title",60,"title");
+    sync("in-desc","p-desc","c-desc","s-desc",155,"description");
+  }
+  $("in-title").addEventListener("input",run);
+  $("in-desc").addEventListener("input",run);
+  run();
+})();
+</script>
+
+</body>
+</html>
